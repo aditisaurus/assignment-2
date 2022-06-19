@@ -1,13 +1,11 @@
 .header {
     display: flex;
     position: sticky;
-    top: 0;
    border-bottom: 2px solid black;
    padding-top: 10px;
    padding-bottom: 10px;
    padding-left: 10px;
    width: 100%;
-   z-index: 999;
 }
 .header-right {
      display: flex;

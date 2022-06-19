@@ -12,35 +12,35 @@ export function makeServer({ environment = "test" } = {}) {
       server.create("product", { id:1,
         title:'T-Shirt',
         category:'Clothes',
-        image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+        image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
         server.create("product", { id:2,
             title:'T-Shirt',
             category:'Clothes',
-            image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+            image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
             server.create("product", { id:3,
                 title:'T-Shirt',
                 category:'Clothes',
-                image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
                 server.create("product", { id:4,
                     title:'T-Shirt',
                     category:'Clothes',
-                    image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                    image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
                     server.create("product", { id:5,
                         title:'T-Shirt',
                         category:'Clothes',
-                        image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                        image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
                         server.create("product", { id:6,
                             title:'T-Shirt',
                             category:'Clothes',
-                            image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                            image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
                             server.create("product", { id:7,
                                 title:'T-Shirt',
                                 category:'Clothes',
-                                image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                                image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
                                 server.create("product", { id:8,
                                     title:'T-Shirt',
                                     category:'Clothes',
-                                    image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
+                                    image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
 
          server.create("product", { id:9,
          title:'Rolex',
