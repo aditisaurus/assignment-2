@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [cartList, setCartList] = useState([]);
 
   useEffect(() => {
     fetch("/api/products")
@@ -19,9 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header setCartList={setCartList} cartList={cartList}/>
       <Main 
-        products={products}
+        products={products} setCartList={setCartList} cartList={cartList}
       />
     </div>
   );

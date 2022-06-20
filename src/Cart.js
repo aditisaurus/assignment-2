@@ -1,14 +1,19 @@
-import React from 'react';
-import {Button} from 'react-bootstrap';
+import React, {useEffect} from 'react';
+import {Button, Badge} from 'react-bootstrap';
 import './Cart.css';
 
-function Cart() {
+function Cart({setCartList, cartList}) {
+
+  useEffect(() =>{
+
+  },[cartList])
   return (
     <div className="cart">
+        {cartList?.map((value) => (
         <div className="cart_box" >
           <div className="cart_img">
-            <img src={''} alt="" />
-            <p>Title</p>
+            <img src={value.image} alt="" />
+            <h6> <Badge bg="secondary">{value.title}</Badge></h6> 
           </div>
           <div>
           <Button variant="info">+</Button>{' '}
@@ -20,6 +25,8 @@ function Cart() {
           
           </div>
         </div>
+        ))}
+        
     </div>
   )
 }

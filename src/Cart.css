@@ -1,8 +1,22 @@
-.cart_img p {
+.cart {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_img > h6 {
     font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
+
   }
+
+  .cart_img > img{
+    width: 4rem;
+    margin-left: 10px;
+  }
+
+
 
   .cart_box {
     display: flex;

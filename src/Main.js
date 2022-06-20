@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './Main.css';
 import {Row, Col, ListGroup, Button, Card, Badge}from 'react-bootstrap';
 
-function Main({products}) {
+function Main({products, setCartList, cartList}) {
 
   
-
     const [category, setCategory] = useState(products);
-    const [heading, setHeading] = useState('All Products');
+    const [heading, setHeading] = useState('Select Category to view Products');
+    
 
     useEffect(() => {
         
@@ -50,6 +50,21 @@ function Main({products}) {
         setHeading('Watches')
     }
 
+    const handleChange = (id) => {
+  
+        const checked = products.filter((value) => {
+                        if(value.id === id)
+                        {
+                          return value
+                        }
+        });
+        
+         
+              setCartList([...cartList,...checked]);
+              console.log(cartList, " Checked");
+             
+      }
+
   return (
     <div className="Main">
 <Row>
@@ -77,7 +92,7 @@ function Main({products}) {
       <Card.Img variant="top" src={value.image}/>
       <Card.Body>
         <Card.Title>{value.title}</Card.Title>
-        <Button variant="info">Add to Cart</Button>
+        <Button variant="info" id={value.id} onClick={() =>handleChange(value.id)}>Add to Cart</Button>
       </Card.Body>
     </Card>
     ))}

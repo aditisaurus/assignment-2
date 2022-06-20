@@ -3,7 +3,7 @@ import {Badge,Dropdown, Row, Col}from 'react-bootstrap';
 import Cart from './Cart';
 import './Header.css';
 
-function Header() {
+function Header({setCartList, cartList}) {
   return (
     <Row className="header">
         <Col><h1>
@@ -23,7 +23,7 @@ function Header() {
 
         <Dropdown.Menu variant="info">
           <Dropdown.Item href="#/action-1" active>
-            <Cart/>
+            <Cart setCartList={setCartList} cartList={cartList}/>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
