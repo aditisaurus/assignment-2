@@ -5,9 +5,7 @@ display: flex;
 
 
 .card{
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
+   
    padding-left: 10px;
    padding-top: 10px;
    padding-right: 10px;
