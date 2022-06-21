@@ -1,9 +1,14 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import {Badge,Dropdown, Row, Col}from 'react-bootstrap';
 import Cart from './Cart';
 import './Header.css';
 
-function Header({setCartList, cartList}) {
+function Header({setCartList, cartList, cartLength, setCartLength, counter, setCounter}) {
+
+    useEffect(() => {
+
+    },[cartLength])
+
   return (
     <Row className="header">
         <Col><h1>
@@ -23,7 +28,9 @@ function Header({setCartList, cartList}) {
 
         <Dropdown.Menu variant="info">
           <Dropdown.Item href="#/action-1" active>
-            <Cart setCartList={setCartList} cartList={cartList}/>
+            <Cart setCartList={setCartList} cartList={cartList} 
+            cartLength={cartLength} setCartLength={setCartLength}
+            counter={counter} setCounter={setCounter}/>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

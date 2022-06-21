@@ -9,93 +9,93 @@ export function makeServer({ environment = "test" } = {}) {
     },
 
     seeds(server) {
-      server.create("product", { id:1,
+      server.create("product", { id:1, frequency:0,
         title:'T-Shirt',
         category:'Clothes',
         image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-        server.create("product", { id:2,
+        server.create("product", { id:2, frequency:0,
             title:'T-Shirt',
             category:'Clothes',
             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-            server.create("product", { id:3,
+            server.create("product", { id:3, frequency:0,
                 title:'T-Shirt',
                 category:'Clothes',
                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-                server.create("product", { id:4,
+                server.create("product", { id:4, frequency:0,
                     title:'T-Shirt',
                     category:'Clothes',
                     image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-                    server.create("product", { id:5,
+                    server.create("product", { id:5, frequency:0,
                         title:'T-Shirt',
                         category:'Clothes',
                         image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-                        server.create("product", { id:6,
+                        server.create("product", { id:6, frequency:0,
                             title:'T-Shirt',
                             category:'Clothes',
                             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-                            server.create("product", { id:7,
+                            server.create("product", { id:7, frequency:0,
                                 title:'T-Shirt',
                                 category:'Clothes',
                                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
-                                server.create("product", { id:8,
+                                server.create("product", { id:8, frequency:0,
                                     title:'T-Shirt',
                                     category:'Clothes',
                                     image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clothes.jpeg'})
 
-         server.create("product", { id:9,
+         server.create("product", { id:9, frequency:0,
          title:'Rolex',
          category:'Watches',
          image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-         server.create("product", { id:10,
+         server.create("product", { id:10, frequency:0,
             title:'Rolex',
             category:'Watches',
             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-            server.create("product", { id:11,
+            server.create("product", { id:11, frequency:0,
                 title:'Rolex',
                 category:'Watches',
                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-                server.create("product", { id:12,
+                server.create("product", { id:12, frequency:0,
                     title:'Rolex',
                     category:'Watches',
                     image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-                    server.create("product", { id:13,
+                    server.create("product", { id:13, frequency:0,
                         title:'Rolex',
                         category:'Watches',
                         image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-                        server.create("product", { id:14,
+                        server.create("product", { id:14, frequency:0,
                             title:'Rolex',
                             category:'Watches',
                             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
-                            server.create("product", { id:15,
+                            server.create("product", { id:15, frequency:0,
                                 title:'Rolex',
                                 category:'Watches',
                                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Watches.jpeg'})
         
-        server.create("product", { id:16,
+        server.create("product", { id:16, frequency:0,
         title:'Ajanta',
         category:'Clocks',
         image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-        server.create("product", { id:17,
+        server.create("product", { id:17, frequency:0,
             title:'Ajanta',
             category:'Clocks',
             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-            server.create("product", { id:18,
+            server.create("product", { id:18, frequency:0,
                 title:'Ajanta',
                 category:'Clocks',
                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-                server.create("product", { id:19,
+                server.create("product", { id:19, frequency:0,
                     title:'Ajanta',
                     category:'Clocks',
                     image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-                    server.create("product", { id:20,
+                    server.create("product", { id:20, frequency:0,
                         title:'Ajanta',
                         category:'Clocks',
                         image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-                        server.create("product", { id:21,
+                        server.create("product", { id:21, frequency:0,
                             title:'Ajanta',
                             category:'Clocks',
                             image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})
-                            server.create("product", { id:22,
+                            server.create("product", { id:22, frequency:0,
                                 title:'Ajanta',
                                 category:'Clocks',
                                 image:'https://raw.githubusercontent.com/aditisinghdeveloper/assignment-2/master/Clock.jpeg'})

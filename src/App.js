@@ -9,6 +9,9 @@ function App() {
 
   const [products, setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
+  const [cartLength, setCartLength] = useState(cartList.length);
+  const [counter, setCounter] = useState(1);
+
 
   useEffect(() => {
     fetch("/api/products")
@@ -20,10 +23,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header setCartList={setCartList} cartList={cartList}/>
+      <Header setCartList={setCartList} cartList={cartList} 
+      cartLength={cartLength} setCartLength={setCartLength} 
+      counter={counter} setCounter={setCounter}/>
+      {products.length>0 &&
       <Main 
-        products={products} setCartList={setCartList} cartList={cartList}
-      />
+        products={products} setCartList={setCartList} cartList={cartList} counter={counter} setCounter={setCounter}
+      />}
     </div>
   );
 }

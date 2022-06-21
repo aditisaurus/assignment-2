@@ -2,16 +2,20 @@ import React, {useState, useEffect} from 'react';
 import './Main.css';
 import {Row, Col, ListGroup, Button, Card, Badge}from 'react-bootstrap';
 
-function Main({products, setCartList, cartList}) {
+function Main({products, setCartList, cartList, counter, setCounter}) {
 
   
     const [category, setCategory] = useState(products);
-    const [heading, setHeading] = useState('Select Category to view Products');
+    const [heading, setHeading] = useState('All Products');
     
 
     useEffect(() => {
         
     },[category]
+    )
+    useEffect(() => {
+        
+    },[]
     )
 
     const clothesCategory = () => {
@@ -50,18 +54,25 @@ function Main({products, setCartList, cartList}) {
         setHeading('Watches')
     }
 
-    const handleChange = (id) => {
-  
+    const addToCart = (id, event, value) => {
+        event.stopPropagation();
+        if(cartList.includes(value)){
+            value.frequency = value.frequency+1;
+            console.log(value.frequency +" freqqq")
+        }
+        else{
+
         const checked = products.filter((value) => {
-                        if(value.id === id)
+                        if(value.id === id && !cartList.includes(value))
                         {
-                          return value
+                            value.frequency = value.frequency+1; 
+                          return (value)
                         }
-        });
-        
-         
+       
+        })
               setCartList([...cartList,...checked]);
               console.log(cartList, " Checked");
+    }
              
       }
 
@@ -92,7 +103,7 @@ function Main({products, setCartList, cartList}) {
       <Card.Img variant="top" src={value.image}/>
       <Card.Body>
         <Card.Title>{value.title}</Card.Title>
-        <Button variant="info" id={value.id} onClick={() =>handleChange(value.id)}>Add to Cart</Button>
+        <Button variant="info" id={value.id} onClick={(e) =>addToCart(value.id, e, value)}>Add to Cart</Button>
       </Card.Body>
     </Card>
     ))}
