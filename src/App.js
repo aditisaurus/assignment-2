@@ -10,7 +10,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cartList, setCartList] = useState([]);
   const [cartLength, setCartLength] = useState(cartList.length);
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState({});
 
 
   useEffect(() => {

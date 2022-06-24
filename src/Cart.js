@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {Button, Badge} from 'react-bootstrap';
 import './Cart.css';
 
-function Cart({setCartList, cartList, counter, setCounter}) {
+function Cart({setCartList, cartList}) {
 
     
   useEffect(() =>{
 
   },[cartList])
 
-  const handleChange = (value, d,event) => {
+  const handleChange = (d, event, id, fr) => {
+    console.log(cartList," Cart List")
     event.stopPropagation();
-    const c = counter + d;
-
-    setCounter(c);
+    const freq = fr+d;
+    setCartList(
+        cartList.map(l=>l.id==id?{...l,frequency:freq}:l)
+    )
   };
 
   
@@ -29,18 +31,18 @@ function Cart({setCartList, cartList, counter, setCounter}) {
   return (
     <div className="cart">
         {cartList?.map((value) => (
-        <div className="cart_box" >
+        value!=null&&<div className="cart_box" >
           <div className="cart_img">
             <img src={value.image} alt="" />
             <h6> <Badge bg="secondary">{value.title}</Badge></h6> 
           </div>
           <div>
-          <Button variant="info" onClick={(e) => handleChange(value, 1, e)}>+</Button>{' '}
+          <Button variant="info" onClick={(e) => handleChange(1, e, value.id, value.frequency)}>+</Button>{' '}
           <Button variant="info">{value.frequency}</Button>{' '}
-          <Button variant="info" onClick={(e) => handleChange(value, -1, e)}>-</Button>{' '}
+          <Button variant="info" onClick={(e) => handleChange( -1, e, value.id, value.frequency)}>-</Button>{' '}
           </div>
           <div>
-          <Button variant="secondary" id={value.id} onClick={(e)=>remove(value.id, e)}>Remove</Button>{' '}
+          <Button variant="secondary" text="dark" id={value.id} onClick={(e)=>remove(value.id, e)}>Remove</Button>{' '}
           
           </div>
         </div>

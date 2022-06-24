@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Main.css';
 import {Row, Col, ListGroup, Button, Card, Badge}from 'react-bootstrap';
 
-function Main({products, setCartList, cartList, counter, setCounter}) {
+function Main({products, setCartList, cartList}) {
 
   
     const [category, setCategory] = useState(products);
@@ -54,25 +54,21 @@ function Main({products, setCartList, cartList, counter, setCounter}) {
         setHeading('Watches')
     }
 
-    const addToCart = (id, event, value) => {
+    const addToCart = (id, event, fre) => {
         event.stopPropagation();
-        if(cartList.includes(value)){
-            value.frequency = value.frequency+1;
-            console.log(value.frequency +" freqqq")
-        }
-        else{
+        const freq = fre+1;
+        setCartList(cartList.map(l=>l.id==id?{...l,frequency:freq}:l));
 
         const checked = products.filter((value) => {
-                        if(value.id === id && !cartList.includes(value))
+                        if(value.id === id)
                         {
-                            value.frequency = value.frequency+1; 
                           return (value)
                         }
        
         })
               setCartList([...cartList,...checked]);
               console.log(cartList, " Checked");
-    }
+    
              
       }
 
@@ -103,7 +99,7 @@ function Main({products, setCartList, cartList, counter, setCounter}) {
       <Card.Img variant="top" src={value.image}/>
       <Card.Body>
         <Card.Title>{value.title}</Card.Title>
-        <Button variant="info" id={value.id} onClick={(e) =>addToCart(value.id, e, value)}>Add to Cart</Button>
+        <Button variant="info" id={value.id} onClick={(e) =>addToCart(value.id, e, value.frequency)}>Add to Cart</Button>
       </Card.Body>
     </Card>
     ))}
