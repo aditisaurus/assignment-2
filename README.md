@@ -1,1 +1,1 @@
-![Assignment-2-screenshot](https://user-images.githubusercontent.com/85564603/131132753-d234c659-60a3-43bd-803c-38348b66f3e3.png)
+![Assignment-2-screenshot](https://github.com/aditisinghdeveloper/assignment-2/blob/master/screencapture-localhost-3000-2022-08-30-10_49_10.png)
