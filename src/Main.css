@@ -3,10 +3,9 @@ display: flex;
 
 }
 
-
-.card{
-   
-   padding-left: 10px;
-   padding-top: 10px;
-   padding-right: 10px;
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
 }

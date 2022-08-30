@@ -18,15 +18,11 @@ function Cart({setCartList, cartList}) {
     )
   };
 
-  
-    
-    const remove = (id, event) => {
+  const remove = (id, event) => {
         event.stopPropagation();
         setCartList(cartList.filter((i)=>(i.id !== id)))
        
       }
-  
-
 
   return (
     <div className="cart">

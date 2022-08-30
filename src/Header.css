@@ -6,11 +6,17 @@
    padding-bottom: 10px;
    padding-left: 10px;
    width: 100%;
+   z-index: 1;
 }
-.header-right {
+
+.float-left {
+
+}
+.float-end {
      display: flex;
      justify-content: flex-end;
-     align-items: center;
+     align-items: baseline;
+     flex-direction: row;
 }
 
 .badge {

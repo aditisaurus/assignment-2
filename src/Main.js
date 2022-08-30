@@ -56,8 +56,15 @@ function Main({products, setCartList, cartList}) {
 
     const addToCart = (id, event, fre) => {
         event.stopPropagation();
+        const exist = cartList.filter((value) => { 
+            if(value.id = id){
+                return true;
+            }
+        })
+            if(exist === true) { 
         const freq = fre+1;
-        setCartList(cartList.map(l=>l.id==id?{...l,frequency:freq}:l));
+        setCartList(cartList.map(l=>l.id==id?{...l,frequency:freq}:l)); }
+        else{
 
         const checked = products.filter((value) => {
                         if(value.id === id)
@@ -67,6 +74,7 @@ function Main({products, setCartList, cartList}) {
        
         })
               setCartList([...cartList,...checked]);
+    } 
               console.log(cartList, " Checked");
     
              
@@ -90,11 +98,13 @@ function Main({products, setCartList, cartList}) {
     </Col>
 
     <Col md={8}>
-
+  
     <h3>
         <Badge bg="info" text="dark">{heading}</Badge>
       </h3>
+      <div className="container">
       {category.map((value) => (
+    
     <Card className="card"  style={{ width: '18rem' }}>
       <Card.Img variant="top" src={value.image}/>
       <Card.Body>
@@ -103,6 +113,7 @@ function Main({products, setCartList, cartList}) {
       </Card.Body>
     </Card>
     ))}
+    </div>
     </Col>
   </Row>
     </div>

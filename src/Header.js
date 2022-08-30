@@ -18,14 +18,11 @@ function Header({setCartList, cartList, cartLength, setCartLength, counter, setC
       
       <Col>
     <div className="float-end">
-        
-      <Badge className="badge" bg="dark">0</Badge>
-
+   <Badge className="badge" bg="dark">0</Badge>
       <Dropdown className="cart-dropdown">
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="info" text="light">
           Cart
         </Dropdown.Toggle>
-
         <Dropdown.Menu variant="info">
           <Dropdown.Item href="#/action-1" active>
             <Cart setCartList={setCartList} cartList={cartList} 
@@ -34,7 +31,6 @@ function Header({setCartList, cartList, cartLength, setCartLength, counter, setC
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-
       <div className="username">
       <Badge bg="info">Username</Badge>{' '}
       </div>

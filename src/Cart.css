@@ -2,6 +2,7 @@
     background-color: aqua;
     display: flex;
     flex-direction: column;
+    z-index: 999;
 }
 
 .cart_img > h6 {
